@@ -9,12 +9,18 @@
 //Don't forget to include a countdown timer.
 
 //target the button and on click, display new page
-var number = 60;
+var number = 120;
 var timer;
 
-$("#btn").on("click",function(){
+$("#questions").hide();
+$("#submit").hide();
+$("#results").hide();
+
+
+
+$("#start").on("click",function(){
 //get rid of button
-    $("#btn").detach();
+    $("#start").detach();
 //create new text that says time remaining
 //create a count down from 60 seconds
 function run() {
@@ -36,20 +42,19 @@ function countDown() {
   }
 
 var timeRemaining = $("<p>").text("Time Remaining : " + run())
-    $(".container").append(timeRemaining);
+    $("#timer").append(timeRemaining);
 
-var questionOne = $("<p>").text("What species is the largest living bird?");
-var newDiv = $("<div>");
-var inputOne = $("<input type=radio>");
-var labelOne = $("<label>").text(" " + "answer goes here");
-var inputTwo = $("<input type=radio>");
-var labelTwo = $("<label>").text(" " + "answer goes here");
-var inputThree = $("<input type=radio>");
-var labelThree = $("<label>").text(" " + "answer goes here");
-var inputFour = $("<input type=radio>");
-var labelFour = $("<label>").text(" " + "answer goes here");
-
-    $(".container").append(questionOne);
-    $(".container").append(newDiv,inputOne,labelOne,inputTwo,labelTwo,inputThree,labelThree,inputFour,labelFour);
-    
+//show questions and submit button
+$("#questions").show();
+$("#submit").show();
 });
+
+$("#submit").on("click",function(){
+    $("#questions").hide();
+    $("#submit").hide();
+    $("#timer").hide();
+    stop();
+    $("#results").show();
+
+});
+

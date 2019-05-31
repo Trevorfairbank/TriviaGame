@@ -18,8 +18,55 @@
 
     <div class="container">
         <h1>Trivia Game!</h1>
-        <button id=btn>Start!</button>
+        <button id="start">START</button>
+        <div id="timer"></div>
+
+        <div id="questions">
+            <div class=questionOne>
+                <h2>What species is the largest living bird?</h2>
+                <input type="radio" name="bird" val="1">
+                <label for="Golden Eagle">Golden Eagle</label>
+                <input type="radio" name="bird" val="2">
+                <label for="Emu">Emu</label>
+                <input type="radio" name="bird" val="3">
+                <label for="Bald Eagle">Bald Eagle</label>
+                <input type="radio" name="bird" val="4">
+                <label for="Ostrich">Ostrich</label>
+            </div>
+            <div class=questionTwo>
+                    <h2>What is the largest country in the world?</h2>
+                    <input type="radio" name="country" val="1">
+                    <label for="madagascar">Madagascar</label>
+                    <input type="radio" name="country" val="2">
+                    <label for="sumatra">Sumatra</label>
+                    <input type="radio" name="country" val="3">
+                    <label for="greenland">Greenland</label>
+                    <input type="radio" name="country" val="4">
+                    <label for="borneo">Borneo</label>
+                </div>
+            <div class=questionThree>
+                    <h2>What mammal flies?</h2>
+                    <input type="radio" name="fly" val="1">
+                    <label for="bird">A Bird</label>
+                    <input type="radio" name="fly" val="2">
+                    <label for="squirrel">A Squirrel</label>
+                    <input type="radio" name="fly" val="3">
+                    <label for="bat">A Bat</label>
+                    <input type="radio" name="fly" val="4">
+                    <label for="monkey">A Monkey</label>
+                </div>
+        </div>
+    <button id="submit">SUBMIT</button>
+        <div id="results">
+            <h4 id="correct">Correct Answers: </h4>
+            <h4 id="incorrect">Incorrect Answers: </h4>
+            <h4 id="unanswered">Unanswered Answers: </h4>
+        </div>
+
     </div>
+
+
+
 
 
     <script src="assets/javascript/app.js"></script>
