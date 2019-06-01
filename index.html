@@ -19,44 +19,44 @@
     <div class="container">
         <h1>Trivia Game!</h1>
         <button id="start">START</button>
-        <div id="timer"></div>
+        <div id="timer">Time Remaining: 120</div>
 
         <div id="questions">
-            <div class=questionOne>
+            <form class="questionOne">
                 <h2>What species is the largest living bird?</h2>
-                <input type="radio" name="bird" val="1">
+                <input type="radio" name="bird" value="Golden Eagle">
                 <label for="Golden Eagle">Golden Eagle</label>
-                <input type="radio" name="bird" val="2">
+                <input type="radio" name="bird" value="Emu">
                 <label for="Emu">Emu</label>
-                <input type="radio" name="bird" val="3">
+                <input type="radio" name="bird" value="Bald Eagle">
                 <label for="Bald Eagle">Bald Eagle</label>
-                <input type="radio" name="bird" val="4">
+                <input type="radio" name="bird" value="Ostrich">
                 <label for="Ostrich">Ostrich</label>
-            </div>
-            <div class=questionTwo>
-                    <h2>What is the largest country in the world?</h2>
-                    <input type="radio" name="country" val="1">
-                    <label for="madagascar">Madagascar</label>
-                    <input type="radio" name="country" val="2">
-                    <label for="sumatra">Sumatra</label>
-                    <input type="radio" name="country" val="3">
-                    <label for="greenland">Greenland</label>
-                    <input type="radio" name="country" val="4">
-                    <label for="borneo">Borneo</label>
-                </div>
-            <div class=questionThree>
-                    <h2>What mammal flies?</h2>
-                    <input type="radio" name="fly" val="1">
-                    <label for="bird">A Bird</label>
-                    <input type="radio" name="fly" val="2">
-                    <label for="squirrel">A Squirrel</label>
-                    <input type="radio" name="fly" val="3">
-                    <label for="bat">A Bat</label>
-                    <input type="radio" name="fly" val="4">
-                    <label for="monkey">A Monkey</label>
-                </div>
+            </form>
+            <form class="questionTwo">
+                <h2>What is the largest country in the world?</h2>
+                <input type="radio" name="country" value="Madagascar">
+                <label for="madagascar">Madagascar</label>
+                <input type="radio" name="country" value="Sumatra">
+                <label for="sumatra">Sumatra</label>
+                <input type="radio" name="country" value="Greenland">
+                <label for="greenland">Greenland</label>
+                <input type="radio" name="country" value="Borneo">
+                <label for="borneo">Borneo</label>
+            </form>
+            <form class="questionThree">
+                <h2>What mammal flies?</h2>
+                <input type="radio" name="fly" value="Bird">
+                <label for="bird">A Bird</label>
+                <input type="radio" name="fly" value="Squirrel">
+                <label for="squirrel">A Squirrel</label>
+                <input type="radio" name="fly" value="Bat">
+                <label for="bat">A Bat</label>
+                <input type="radio" name="fly" value="Monkey">
+                <label for="monkey">A Monkey</label>
+            </form>
         </div>
-    <button id="submit">SUBMIT</button>
+        <button id="submit">SUBMIT</button>
         <div id="results">
             <h4 id="correct">Correct Answers: </h4>
             <h4 id="incorrect">Incorrect Answers: </h4>
