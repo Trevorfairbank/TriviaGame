@@ -58,7 +58,7 @@ $("#submit").on("click", function () {
     $("#questions").hide();
     $("#submit").hide();
     $("#timer").hide();
-    stop();
+    clearInterval(timer);
     $("#results").show();
 
 //Question One
@@ -102,6 +102,48 @@ else if (!userThree){
 else if (!aThree){
     incorrect++;
 }
+
+//Question Four
+var userFour = $("input[name='fish']:checked").val();
+var aFour = $("input[value='whaleshark']:checked").val()
+
+if (aFour){
+    correct++;
+}
+else if (!userFour){
+    unanswered++;
+}
+else if (!aFour){
+    incorrect++;
+}
+//Question Five
+var userFive = $("input[name='tall']:checked").val();
+var aFive = $("input[value='giraffe']:checked").val()
+
+if (aFive){
+    correct++;
+}
+else if (!userFive){
+    unanswered++;
+}
+else if (!aFive){
+    incorrect++;
+}
+
+//Question Six
+var userSix = $("input[name='slow']:checked").val();
+var aSix = $("input[value='sloth']:checked").val()
+
+if (aSix){
+    correct++;
+}
+else if (!userFive){
+    unanswered++;
+}
+else if (!aSix){
+    incorrect++;
+}
+
 
     $("#correct").append(correct);
     $("#incorrect").append(incorrect);
