@@ -9,8 +9,8 @@
 //Don't forget to include a countdown timer.
 
 //target the button and on click, display new page
-var number = 80;
-var timer = 80;
+var number = 60;
+var timer = 60;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
