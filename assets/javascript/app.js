@@ -10,7 +10,7 @@
 
 //target the button and on click, display new page
 var number = 60;
-var timer = 60;
+var timer;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
@@ -32,34 +32,38 @@ $("#start").on("click", function () {
         timer = setInterval(countDown, 1000);
     }
 
+    function stop() {
+        clearInterval(timer);
+    }
     function countDown() {
         number--;
         $("#timer").text("Time Remaining: " + number);
         if (number === 0) {
             stop();
-            alert("Time Up!");
+            alert("Times Up!");
+            $("#questions").hide();
+            $("#submit").hide();
+            $("#timer").hide();
+            $("#results").show();
+            $("#correct").append(correct);
+            $("#incorrect").append(incorrect);
+            $("#unanswered").append(unanswered);
         }
     }
-    function stop() {
-        clearInterval(timer);
-    }
-
-    run();
-
-    
 
     //show questions and submit button
     $("#questions").show();
     $("#submit").show();
-});
 
 
-$("#submit").on("click", function () {
+
+    $("#submit").on("click", function () {
     $("#questions").hide();
     $("#submit").hide();
     $("#timer").hide();
-    clearInterval(timer);
+    stop();
     $("#results").show();
+
 
 //Question One
 var userOne = $("input[name='bird']:checked").val();
@@ -204,5 +208,9 @@ else if (!aTen){
     $("#incorrect").append(incorrect);
     $("#unanswered").append(unanswered);
 
+
 });
 
+run();
+
+});
