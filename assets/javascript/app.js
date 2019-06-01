@@ -76,8 +76,8 @@ else if (!aOne){
 }
 
 //Question Two
-var userTwo = $("input[name='country']:checked").val();
-var aTwo = $("input[value='Greenland']:checked").val()
+var userTwo = $("input[name='ferret']:checked").val();
+var aTwo = $("input[value='business']:checked").val()
 
 if (aTwo){
     correct++;
@@ -137,13 +137,68 @@ var aSix = $("input[value='sloth']:checked").val()
 if (aSix){
     correct++;
 }
-else if (!userFive){
+else if (!userSix){
     unanswered++;
 }
 else if (!aSix){
     incorrect++;
 }
 
+//Question Seven
+var userSeven = $("input[name='zebra']:checked").val();
+var aSeven = $("input[value='dazzle']:checked").val()
+
+if (aSeven){
+    correct++;
+}
+else if (!userSeven){
+    unanswered++;
+}
+else if (!aSeven){
+    incorrect++;
+}
+
+//Question Eight
+var userEight = $("input[name='skin']:checked").val();
+var aEight = $("input[value='black']:checked").val()
+
+if (aEight){
+    correct++;
+}
+else if (!userEight){
+    unanswered++;
+}
+else if (!aEight){
+    incorrect++;
+}
+
+//Question Nine
+var userNine = $("input[name='flap']:checked").val();
+var aNine = $("input[value='70']:checked").val()
+
+if (aNine){
+    correct++;
+}
+else if (!userNine){
+    unanswered++;
+}
+else if (!aNine){
+    incorrect++;
+}
+
+//Question Ten
+var userTen = $("input[name='flamboyance']:checked").val();
+var aTen = $("input[value='flamingos']:checked").val()
+
+if (aTen){
+    correct++;
+}
+else if (!userTen){
+    unanswered++;
+}
+else if (!aTen){
+    incorrect++;
+}
 
     $("#correct").append(correct);
     $("#incorrect").append(incorrect);

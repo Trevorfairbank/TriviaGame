@@ -6,9 +6,41 @@ body {
     background-size: 1400px;
     
 }
+h1 {
+    color:#29AB87;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+}
+h4 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+label {
+    font-family: 'Quicksand', sans-serif;
+}
 
 .container {
-    background-color: slategrey;
-    width:50%;
+    background-color:#fff;
+    width:70%;
     text-align: center;
+    opacity:80%;
+}
+
+
+#start {
+    margin:20px;
+    padding:10px;
+}
+#submit {
+    margin:20px;
+    padding:10px;
+}
+
+#results {
+    margin:20px;
+    padding:10px;
 }
