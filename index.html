@@ -1,153 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Trivia Game</title>
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker|Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-
-
+  <body>
     <div class="container">
-        <h1>Animal Trivia Game</h1>
-        <button id="start">START</button>
-        <div id="timer">Time Remaining: 100</div>
+      <h1>Animal Trivia Game</h1>
+      <button id="start">START</button>
+      <div id="timer">Time Remaining: 100</div>
 
-        <div id="questions">
-            <form class="questionOne">
-                <h2>What is the largest living bird?</h2>
-                <input type="radio" name="bird" value="Golden Eagle">
-                <label for="Golden Eagle">Golden Eagle</label>
-                <input type="radio" name="bird" value="Emu">
-                <label for="Emu">Emu</label>
-                <input type="radio" name="bird" value="Bald Eagle">
-                <label for="Bald Eagle">Bald Eagle</label>
-                <input type="radio" name="bird" value="Ostrich">
-                <label for="Ostrich">Ostrich</label>
-            </form>
-            <form class="questionTwo">
-                <h2>What is a group of ferrets called?</h2>
-                <input type="radio" name="ferret" value="business">
-                <label for="business">Business</label>
-                <input type="radio" name="ferret" value="herd">
-                <label for="herd">Herd</label>
-                <input type="radio" name="ferret" value="gaggle">
-                <label for="gaggle">Gaggle</label>
-                <input type="radio" name="ferret" value="flock">
-                <label for="flock">Flock</label>
-            </form>
-            <form class="questionThree">
-                <h2>What mammal flies?</h2>
-                <input type="radio" name="fly" value="Bird">
-                <label for="bird">Bird</label>
-                <input type="radio" name="fly" value="Squirrel">
-                <label for="squirrel">Squirrel</label>
-                <input type="radio" name="fly" value="Bat">
-                <label for="bat">Bat</label>
-                <input type="radio" name="fly" value="Monkey">
-                <label for="monkey">Monkey</label>
-            </form>
-            <form class="questionFour">
-                    <h2>What is the world's largest fish?</h2>
-                    <input type="radio" name="fish" value="bluewhale">
-                    <label for="bluewhale">Blue Whale</label>
-                    <input type="radio" name="fish" value="whaleshark">
-                    <label for="whaleshark">Whale Shark</label>
-                    <input type="radio" name="fish" value="greatwhite">
-                    <label for="greatwhite">Great White Shark</label>
-                    <input type="radio" name="fish" value="bluefin">
-                    <label for="bluefin">Bluefin Tuna</label>
-                </form>
-            <form class="questionFive">
-                    <h2>Which animal has the highest blood pressure?</h2>
-                    <input type="radio" name="tall" value="elephant">
-                    <label for="elephant">African Elephant</label>
-                    <input type="radio" name="tall" value="giraffe">
-                    <label for="giraffe">Giraffe</label>
-                    <input type="radio" name="tall" value="bluewhale">
-                    <label for="bluewhale">Blue Whale</label>
-                    <input type="radio" name="tall" value="moose">
-                    <label for="moose">Moose</label>
-            </form>
-            <form class="questionSix">
-                    <h2>What is the world's slowest animal?</h2>
-                    <input type="radio" name="slow" value="sloth">
-                    <label for="sloth">Three-toed Sloth</label>
-                    <input type="radio" name="slow" value="tortoise">
-                    <label for="tortoise">Giant Tortoise</label>
-                    <input type="radio" name="slow" value="koala">
-                    <label for="koala">Koala</label>
-                    <input type="radio" name="slow" value="starfish">
-                    <label for="starfish">Star Fish</label>
-            </form> 
-            <form class="questionSeven">
-                    <h2>What is a group of Zebras called?</h2>
-                    <input type="radio" name="zebra" value="pride">
-                    <label for="pride">Pride</label>
-                    <input type="radio" name="zebra" value="dazzle">
-                    <label for="dazzle">Dazzle</label>
-                    <input type="radio" name="zebra" value="herd">
-                    <label for="herd">Herd</label>
-                    <input type="radio" name="zebra" value="frenzy">
-                    <label for="frenzy">Frenzy</label>
-            </form> 
-            <form class="questionEight">
-                    <h2>What color is a polar bear’s skin?</h2>
-                    <input type="radio" name="skin" value="white">
-                    <label for="white">White</label>
-                    <input type="radio" name="skin" value="pink">
-                    <label for="pink">Pink</label>
-                    <input type="radio" name="skin" value="black">
-                    <label for="black">Black</label>
-                    <input type="radio" name="skin" value="brown">
-                    <label for="brown">Brown</label>
-            </form> 
-            <form class="questionNine">
-                    <h2>How many times can a hummingbird flap its wings per second?</h2>
-                    <input type="radio" name="flap" value="70">
-                    <label for="70">70</label>
-                    <input type="radio" name="flap" value="120">
-                    <label for="120">120</label>
-                    <input type="radio" name="flap" value="200">
-                    <label for="200">200</label>
-                    <input type="radio" name="flap" value="50">
-                    <label for="50">50</label>
-            </form> 
-            <form class="questionTen">
-                    <h2>A flamboyance is a group of what animals?</h2>
-                    <input type="radio" name="flamboyance" value="ferrets">
-                    <label for="ferrets">Ferrets</label>
-                    <input type="radio" name="flamboyance" value="flamingos">
-                    <label for="flamingos">Flamingos</label>
-                    <input type="radio" name="flamboyance" value="fossa">
-                    <label for="fossa">Fossa</label>
-                    <input type="radio" name="flamboyance" value="hippo">
-                    <label for="hippo">Hippopotamus</label>
-            </form> 
-        </div>
-        <button id="submit">SUBMIT</button>
-        <div id="results">
-            <h4 id="correct">Correct Answers: </h4>
-            <h4 id="incorrect">Incorrect Answers: </h4>
-            <h4 id="unanswered">Unanswered Answers: </h4>
-        </div>
+      <div id="questions">
+        <form class="questionOne">
+          <h2>What is the largest living bird?</h2>
+          <input type="radio" name="bird" value="Golden Eagle" />
+          <label for="Golden Eagle">Golden Eagle</label>
+          <input type="radio" name="bird" value="Emu" />
+          <label for="Emu">Emu</label>
+          <input type="radio" name="bird" value="Bald Eagle" />
+          <label for="Bald Eagle">Bald Eagle</label>
+          <input type="radio" name="bird" value="Ostrich" />
+          <label for="Ostrich">Ostrich</label>
+        </form>
+        <form class="questionTwo">
+          <h2>What is a group of ferrets called?</h2>
+          <input type="radio" name="ferret" value="business" />
+          <label for="business">Business</label>
+          <input type="radio" name="ferret" value="herd" />
+          <label for="herd">Herd</label>
+          <input type="radio" name="ferret" value="gaggle" />
+          <label for="gaggle">Gaggle</label>
+          <input type="radio" name="ferret" value="flock" />
+          <label for="flock">Flock</label>
+        </form>
+        <form class="questionThree">
+          <h2>What mammal flies?</h2>
+          <input type="radio" name="fly" value="Bird" />
+          <label for="bird">Bird</label>
+          <input type="radio" name="fly" value="Squirrel" />
+          <label for="squirrel">Squirrel</label>
+          <input type="radio" name="fly" value="Bat" />
+          <label for="bat">Bat</label>
+          <input type="radio" name="fly" value="Monkey" />
+          <label for="monkey">Monkey</label>
+        </form>
+        <form class="questionFour">
+          <h2>What is the world's largest fish?</h2>
+          <input type="radio" name="fish" value="bluewhale" />
+          <label for="bluewhale">Blue Whale</label>
+          <input type="radio" name="fish" value="whaleshark" />
+          <label for="whaleshark">Whale Shark</label>
+          <input type="radio" name="fish" value="greatwhite" />
+          <label for="greatwhite">Great White Shark</label>
+          <input type="radio" name="fish" value="bluefin" />
+          <label for="bluefin">Bluefin Tuna</label>
+        </form>
+        <form class="questionFive">
+          <h2>Which animal has the highest blood pressure?</h2>
+          <input type="radio" name="tall" value="elephant" />
+          <label for="elephant">African Elephant</label>
+          <input type="radio" name="tall" value="giraffe" />
+          <label for="giraffe">Giraffe</label>
+          <input type="radio" name="tall" value="bluewhale" />
+          <label for="bluewhale">Blue Whale</label>
+          <input type="radio" name="tall" value="moose" />
+          <label for="moose">Moose</label>
+        </form>
+        <form class="questionSix">
+          <h2>What is the world's slowest animal?</h2>
+          <input type="radio" name="slow" value="sloth" />
+          <label for="sloth">Three-toed Sloth</label>
+          <input type="radio" name="slow" value="tortoise" />
+          <label for="tortoise">Giant Tortoise</label>
+          <input type="radio" name="slow" value="koala" />
+          <label for="koala">Koala</label>
+          <input type="radio" name="slow" value="starfish" />
+          <label for="starfish">Star Fish</label>
+        </form>
+        <form class="questionSeven">
+          <h2>What is a group of Zebras called?</h2>
+          <input type="radio" name="zebra" value="pride" />
+          <label for="pride">Pride</label>
+          <input type="radio" name="zebra" value="dazzle" />
+          <label for="dazzle">Dazzle</label>
+          <input type="radio" name="zebra" value="herd" />
+          <label for="herd">Herd</label>
+          <input type="radio" name="zebra" value="frenzy" />
+          <label for="frenzy">Frenzy</label>
+        </form>
+        <form class="questionEight">
+          <h2>What color is a polar bear’s skin?</h2>
+          <input type="radio" name="skin" value="white" />
+          <label for="white">White</label>
+          <input type="radio" name="skin" value="pink" />
+          <label for="pink">Pink</label>
+          <input type="radio" name="skin" value="black" />
+          <label for="black">Black</label>
+          <input type="radio" name="skin" value="brown" />
+          <label for="brown">Brown</label>
+        </form>
+        <form class="questionNine">
+          <h2>How many times can a hummingbird flap its wings per second?</h2>
+          <input type="radio" name="flap" value="70" />
+          <label for="70">70</label>
+          <input type="radio" name="flap" value="120" />
+          <label for="120">120</label>
+          <input type="radio" name="flap" value="200" />
+          <label for="200">200</label>
+          <input type="radio" name="flap" value="50" />
+          <label for="50">50</label>
+        </form>
+        <form class="questionTen">
+          <h2>A flamboyance is a group of what animals?</h2>
+          <input type="radio" name="flamboyance" value="ferrets" />
+          <label for="ferrets">Ferrets</label>
+          <input type="radio" name="flamboyance" value="flamingos" />
+          <label for="flamingos">Flamingos</label>
+          <input type="radio" name="flamboyance" value="fossa" />
+          <label for="fossa">Fossa</label>
+          <input type="radio" name="flamboyance" value="hippo" />
+          <label for="hippo">Hippopotamus</label>
+        </form>
+      </div>
+      <button id="submit">SUBMIT</button>
+      <div id="results">
+        <h4 id="correct">Correct Answers:</h4>
+        <h4 id="incorrect">Incorrect Answers:</h4>
+        <h4 id="unanswered">Unanswered Answers:</h4>
 
+        <h3 id="answer"></h3>
+      </div>
     </div>
 
-
-
-
-
     <script src="assets/javascript/app.js"></script>
-</body>
-
+  </body>
 </html>
